@@ -1,0 +1,66 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h3 class="pa-r-50">JOIN</h3>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="Navber">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to "マイページ", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "登録ユーザー一覧", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            登録サロン関係
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "登録サロン一覧", "#", class: "dropdown-item" %>
+            <%= link_to "コミュニティ作成", "#", class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">その他</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            勤務内容関連
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "シフト一覧", "#", class: "dropdown-item" %>
+            <%= link_to "シフト新規投稿", "#", class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">その他</a>
+          </div>
+        </li>
+      </ul>
+      <div class="form-box pa-30">
+        <form class="form-inline my-2 my-lg-0">
+          <input type="search" class="form-control mr-sm-2" placeholder="検索..." aria-label="検索...">
+          <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
+        </form>
+      </div>
+      <% if user_signed_in? %>
+        <div class="login_info">
+          <div class="pa-10">
+            <%= current_user.name %>
+          </div>
+          <div class="pa-10">
+            <%= link_to "ログアウト", "#", method: :delete, class:"btn btn-danger btn-sm" %>
+          </div>
+        </div>
+      <% else %>
+        <div class="btn-box">
+          <div class="pa-10">
+            <%= link_to "ログイン", "#", class:"btn btn-success btn-sm" %>
+          </div>
+          <div class="pa-10">
+            <%= link_to "新規登録", "#", class:"btn btn-info btn-sm" %>
+          </div>
+        </div>
+      <% end %>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</header>
