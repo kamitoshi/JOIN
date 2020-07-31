@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  enum sex:{men: 0, women: 1, others: 2}
 
   def fullname
     self.last_name + "　" + self.first_name
