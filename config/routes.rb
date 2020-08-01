@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  get 'users/show'
+  get 'users/edit'
   root 'home#top'
   get 'home/about'
   devise_for :users, controllers:{

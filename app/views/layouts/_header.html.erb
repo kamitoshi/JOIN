@@ -54,10 +54,10 @@
       <% else %>
         <div class="btn-box">
           <div class="pa-10">
-            <%= link_to "ログイン", "#", class:"btn btn-success btn-sm" %>
+            <%= link_to "ログイン", new_user_session_path, class:"btn btn-success btn-sm" %>
           </div>
           <div class="pa-10">
-            <%= link_to "新規登録", "#", class:"btn btn-info btn-sm" %>
+            <%= link_to "新規登録", new_user_registration_path, class:"btn btn-info btn-sm" %>
           </div>
         </div>
       <% end %>
