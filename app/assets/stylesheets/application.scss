@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+textarea {
+  resize: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+.field {
+  padding: 25px;
+  .label {
+    font-size: 24px;
+  }
+}
+.table-hover {
+  tbody {
+    tr {
+      cursor: pointer;
+    }
+  }
+}
+
+.index-box {
+  height: 300px;
+}
+.review_index-box {
+  height: 200px;
+}
+.half-box {
+  height: 40vh;
+}
+.new_offer-box,
+.new_review-box {
+  height: 120px;
+}
